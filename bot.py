@@ -10,7 +10,7 @@ SESSION = environ.get("DDOgZ_iDJEf0LO4FlOpYQgcrAz93NsWpomywxamFIibYODav5otIcr_dI
 TIME = 300
 
 # Initialize GROUPS and ADMINS lists with default values
-GROUPS = [-1001683780889, -1001393812865, -1001658506865]
+GROUPS = [-1001683780889, -1001800005463, -1001658506865]
 ADMINS = [503170505]
 
 # Check if "GROUPS" environment variable is set
