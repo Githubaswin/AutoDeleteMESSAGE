@@ -8,7 +8,7 @@ API_HASH = environ.get("e2247341eeec70b41e0e04fc605bd864")
 BOT_TOKEN = environ.get("AAEx9nVNRKchWaLk01zeUBW7cgQ8vOpaFb0")
 SESSION = environ.get("DDOgZ_iDJEf0LO4FlOpYQgcrAz93NsWpomywxamFIibYODav5otIcr_dIbhzoyof6DzoYGdQYM5LivU9PZfdeLPNHWFj")
 TIME = 300
-GROUPS = [-1001683780889 -1001393812865 -1001658506865]
+GROUPS = [-1001683780889, -1001393812865, -1001658506865]
 for grp in environ.get("GROUPS").split():
     GROUPS.append(int(grp))
 ADMINS = [503170505]
