@@ -1,3 +1,4 @@
-Pyrogram
-Tgcrypto
-dotenv>=0.18.0
+# requirements.txt
+Pyrogram==2.0.106
+Tgcrypto==1.2.5
+dotenv==0.18.0
