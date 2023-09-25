@@ -3,8 +3,8 @@ from os import environ
 from pyrogram import Client, filters, idle
 
 # Your API_ID, API_HASH, and BOT_TOKEN remain unchanged
-API_ID = 1417176
-API_HASH = environ.get("e2247341eeec70b41e0e04fc605bd864")
+API_ID = 26229903
+API_HASH = environ.get("b5197d148bd3665a1eb45d1d18b02ad3")
 BOT_TOKEN = environ.get("AAEx9nVNRKchWaLk01zeUBW7cgQ8vOpaFb0")
 SESSION = environ.get("DDOgZ_iDJEf0LO4FlOpYQgcrAz93NsWpomywxamFIibYODav5otIcr_dIbhzoyof6DzoYGdQYM5LivU9PZfdeLPNHWFj")
 TIME = 300
