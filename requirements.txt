@@ -1,4 +1,2 @@
-# requirements.txt
-Pyrogram==2.0.106
-Tgcrypto==1.2.5
+pyrogram==2.0.106
 dotenv==0.18.0
