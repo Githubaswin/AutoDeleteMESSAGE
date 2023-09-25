@@ -2,22 +2,17 @@ import asyncio
 from os import environ
 from pyrogram import Client, filters, idle
 
-# Your API_ID, API_HASH, and BOT_TOKEN remain unchanged
-API_ID = 26229903
-API_HASH = environ.get("b5197d148bd3665a1eb45d1d18b02ad3")
-BOT_TOKEN = environ.get("AAEx9nVNRKchWaLk01zeUBW7cgQ8vOpaFb0")
-SESSION = environ.get("DDOgZ_iDJEf0LO4FlOpYQgcrAz93NsWpomywxamFIibYODav5otIcr_dIbhzoyof6DzoYGdQYM5LivU9PZfdeLPNHWFj")
+API_ID = []
+API_HASH = environ.get("")
+BOT_TOKEN = environ.get("")
+SESSION = environ.get("")
 TIME = 300
-
-# Initialize GROUPS and ADMINS lists with default values
-GROUPS = [-1001683780889, -1001800005463, -1001658506865]
-ADMINS = [503170505]
-
-# Check if "GROUPS" environment variable is set
-groups_env = environ.get("GROUPS")
-if groups_env:
-    for grp in groups_env.split():
-        GROUPS.append(int(grp))
+GROUPS = []
+for grp in environ.get("GROUPS").split():
+    GROUPS.append(int(grp))
+ADMINS = []
+for usr in environ.get("ADMINS").split():
+    ADMINS.append(int(usr))
 else:
     print("Warning: 'GROUPS' environment variable not set or empty.")
 
