@@ -3,11 +3,11 @@ from os import environ
 from pyrogram import Client, filters, idle
 
 # Ensure that your API_ID, API_HASH, and BOT_TOKEN environment variables are set correctly
-API_ID = int(environ.get("API_ID"))
+API_ID = []
 API_HASH = environ.get("API_HASH")
 BOT_TOKEN = environ.get("BOT_TOKEN")
 SESSION = environ.get("SESSION")
-TIME = int(environ.get("TIME"))
+TIME = []
 GROUPS = []
 for grp in environ.get("GROUPS").split():
     GROUPS.append(int(grp))
