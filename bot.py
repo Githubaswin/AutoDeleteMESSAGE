@@ -3,7 +3,7 @@ from os import environ
 from pyrogram import Client, filters, idle
 
 
-API_ID = int(environ.get(1417176))
+API_ID = 1417176
 API_HASH = environ.get("e2247341eeec70b41e0e04fc605bd864")
 BOT_TOKEN = environ.get("AAEx9nVNRKchWaLk01zeUBW7cgQ8vOpaFb0")
 SESSION = environ.get("DDOgZ_iDJEf0LO4FlOpYQgcrAz93NsWpomywxamFIibYODav5otIcr_dIbhzoyof6DzoYGdQYM5LivU9PZfdeLPNHWFj")
