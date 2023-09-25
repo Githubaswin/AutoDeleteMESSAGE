@@ -8,21 +8,6 @@ BOT_TOKEN = environ.get("")
 SESSION = environ.get("")
 TIME = 300
 GROUPS = []
-for grp in environ.get("GROUPS").split():
-    GROUPS.append(int(grp))
-ADMINS = []
-for usr in environ.get("ADMINS").split():
-    ADMINS.append(int(usr))
-else:
-    print("Warning: 'GROUPS' environment variable not set or empty.")
-
-# Check if "ADMINS" environment variable is set
-admins_env = environ.get("ADMINS")
-if admins_env:
-    for usr in admins_env.split():
-        ADMINS.append(int(usr))
-else:
-    print("Warning: 'ADMINS' environment variable not set or empty.")
 
 START_MSG = "<b>Hai {},\nI'm a simple bot to delete group messages after a specific time. Join our Official Channel @T4TVSeries1</b>"
 
