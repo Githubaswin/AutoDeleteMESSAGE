@@ -2,21 +2,34 @@ import asyncio
 from os import environ
 from pyrogram import Client, filters, idle
 
-
+# Your API_ID, API_HASH, and BOT_TOKEN remain unchanged
 API_ID = 1417176
 API_HASH = environ.get("e2247341eeec70b41e0e04fc605bd864")
 BOT_TOKEN = environ.get("AAEx9nVNRKchWaLk01zeUBW7cgQ8vOpaFb0")
 SESSION = environ.get("DDOgZ_iDJEf0LO4FlOpYQgcrAz93NsWpomywxamFIibYODav5otIcr_dIbhzoyof6DzoYGdQYM5LivU9PZfdeLPNHWFj")
 TIME = 300
+
+# Initialize GROUPS and ADMINS lists with default values
 GROUPS = [-1001683780889, -1001393812865, -1001658506865]
-for grp in environ.get("GROUPS").split():
-    GROUPS.append(int(grp))
 ADMINS = [503170505]
-for usr in environ.get("ADMINS").split():
-    ADMINS.append(int(usr))
 
-START_MSG = "<b>Hai {},\nI'm a simple bot to delete group messages after a specific time Join our Ofiicial Channel @T4TVSeries1</b>"
+# Check if "GROUPS" environment variable is set
+groups_env = environ.get("GROUPS")
+if groups_env:
+    for grp in groups_env.split():
+        GROUPS.append(int(grp))
+else:
+    print("Warning: 'GROUPS' environment variable not set or empty.")
 
+# Check if "ADMINS" environment variable is set
+admins_env = environ.get("ADMINS")
+if admins_env:
+    for usr in admins_env.split():
+        ADMINS.append(int(usr))
+else:
+    print("Warning: 'ADMINS' environment variable not set or empty.")
+
+START_MSG = "<b>Hai {},\nI'm a simple bot to delete group messages after a specific time. Join our Official Channel @T4TVSeries1</b>"
 
 User = Client(name="user-account",
               session_string=SESSION,
@@ -25,14 +38,12 @@ User = Client(name="user-account",
               workers=300
               )
 
-
 Bot = Client(name="auto-delete",
              api_id=API_ID,
              api_hash=API_HASH,
              bot_token=BOT_TOKEN,
              workers=300
              )
-
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
@@ -55,6 +66,8 @@ Bot.start()
 print("Bot Started!")
 
 idle()
+
+# The code below will not be reached unless you forcefully stop the script
 
 User.stop()
 print("User Stopped!")
